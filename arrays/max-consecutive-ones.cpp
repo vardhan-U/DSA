@@ -13,9 +13,8 @@ public:
                     biggest = current;
                     }
                 current = 0;
-                    
-            }
         }
+    }
         if(biggest<current){
             return current;
                     }
