@@ -29,25 +29,24 @@ return nums;
 
 
 
-//optimized
-class Solution {
+//optimized solution
+class Solution{
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         int n = nums.size();
         vector<int> result(n); 
-        int posIdx = 0;
-        int negIdx = 1; 
+        int posidx = 0;
+        int negidx = 1; 
         
         for (int i = 0; i < n; i++) {
             if (nums[i] > 0) {
-                result[posIdx] = nums[i];
-                posIdx += 2; // Move to the next even slot
+                result[posidx] = nums[i];
+                posIdx += 2;
             } else {
-                result[negIdx] = nums[i];
+                result[negidx] = nums[i];
                 negIdx += 2; 
             }
         }
         
         return result;
-    }
-};
+    }};
